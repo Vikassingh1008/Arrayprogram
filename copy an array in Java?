@@ -1,0 +1,56 @@
+import java.util.*;
+public class Main
+{
+ 
+	public static void main(String[] args) {
+	
+	//first approach iterating each StackTraceElement
+	int arr[]={1,2,3,4};
+	int arr2[]=new int[arr.length];
+	
+    	for(int i=0;i<arr.length;i++)
+    	{
+    	    arr2[i]=arr[i];
+    	    
+    	}
+    	for(int i=0;i<arr2.length;i++)
+    	{
+    	    
+    	    System.out.print(arr2[i]+" ");
+    	}
+
+        //second approach to use clone method for copy one array to other array
+        int arr[]={1,2,3,4};
+        int arr2[]=arr.clone();
+        for(int i=0;i<arr2.length;i++)
+    	{
+    	   
+    	    System.out.print(arr2[i]+" ");
+    	}
+    
+    
+    
+    //third approach use System.arraycopy
+    int arr[]={1,2,3,4};
+    int arr2[]=new int[arr.length];
+    System.arraycopy(arr,0,arr2,0,arr.length);
+    
+    for(int i=0;i<arr2.length;i++)
+    	{
+    	   
+    	    System.out.print(arr2[i]+" ");
+    	}
+    
+    //fourth approach use Arrays.copyOf 
+        int arr[]={1,2,3,4};
+        int arr2[]=Arrays.copyOf(arr,arr.length);
+        for(int i=0;i<arr2.length;i++)
+    	{
+    	   
+    	    System.out.print(arr2[i]+" ");
+    	}
+    
+    
+	}
+	
+}
