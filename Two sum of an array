@@ -1,0 +1,37 @@
+import java.util.*;
+public class Main
+{
+ 
+	public static void main(String[] args) {
+	
+        int arr[]={1,2,3,4,5,6,7};
+        int twosum[]=new int[2];
+        //if sum of two number not equals to target 
+        twosum[0]=-1;
+        twosum[1]=-1;
+        int target=0;
+        int start=0;
+        int last=arr.length-1;
+        while(start<last)
+        {
+            if(target==(arr[start]+arr[last]))
+            {
+                twosum[0]=start;
+                twosum[1]=last;
+                break;
+                
+            }
+            if(target>(arr[start]+arr[last]))
+            {
+                start++;
+            }
+            else{
+                last--;
+            }
+            
+        }
+    
+        System.out.print(twosum[0]+" "+twosum[1]);
+	}
+	
+}
