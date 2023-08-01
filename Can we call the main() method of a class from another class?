@@ -1,0 +1,24 @@
+public class Main
+{
+ 
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		//call the class a method
+		A.maincaller();
+		
+	}
+}
+ class A{
+    static int i=0;
+    public static void maincaller()
+    {
+        System.out.print("Message");
+     i++;
+     if(i<2)
+     {
+         // call the main method and pass the null string 
+         Main.main(null);
+     }
+     
+    }
+}
