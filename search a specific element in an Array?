@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    // first approach
+	    int arr[]={1,2,3,4};
+	    int search=2;
+	    System.out.print(Arrays.binarySearch(arr,search));
+	    
+	    //second approach
+	    for(int i=0;i<arr.length;i++)
+	    {
+	        if(arr[i]==search)
+	        {
+	            System.out.print(i);
+	            break;
+	        }
+	    }
+	    
+	}
+}
