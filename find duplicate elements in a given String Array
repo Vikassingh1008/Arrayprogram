@@ -1,0 +1,37 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    // first approach
+	    String arr[]={"a","b","a","c","b"};
+	    
+	    for(int i=0;i<arr.length-1;i++)
+	    {
+	        for(int j=i+1;j<arr.length;j++)
+	        {
+	            if(arr[i].equals(arr[j]))
+	            {
+	                System.out.print(arr[i]+" ");
+	            }
+	        }
+	    }
+	    
+	    //second approach
+	    
+	    HashSet<String> st=new HashSet<>();
+	    
+	    for(String val:arr)
+	    
+	    {
+	        if(st.add(val)==false)
+	        {
+	            System.out.print(val+" ");
+	        }
+	    }
+	    
+	    
+	    
+	    
+	}
+}
