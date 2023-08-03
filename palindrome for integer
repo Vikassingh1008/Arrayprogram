@@ -1,0 +1,54 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    //palindrome for Integer
+	    
+	    int num=131;
+	    int temp=num,sum=0,rem;
+	    while(num>0)
+	    {
+	        rem=num%10;
+	        sum=sum*10+rem;
+	        num=num/10;
+	    }
+	    if(sum==temp)
+	    {
+	        System.out.print(sum+" is palindrome");
+	    }else{
+	        System.out.print(sum+" is not palindrome");
+	        
+	    }
+	    
+	    
+	    // useing to queue 
+	    
+	    
+	   Queue<Integer> st=new LinkedList<>();
+	    
+	    while(num>0)
+	    {
+	        st.add(num%10);
+	        num=num/10;
+	    }
+	    while(st.size()>0)
+	    {
+	        sum=sum*10+st.remove();
+	    }
+	    
+	    if(sum==temp)
+	    {
+	        System.out.print(temp+" is palindrome");
+	    }else{
+	        System.out.print(temp+" is not palindrome");
+	        
+	    }
+	    
+	    
+	 
+	    
+	    
+	    
+	}
+}
