@@ -41,7 +41,25 @@ public class Main
 //     }
     
     
-   
+    public static boolean palindrome(String str,Stack<String> st)
+    
+    {
+        String ans="";
+        for(int i=0;i<str.length();i++)
+        {
+            st.push(""+str.charAt(i));
+            
+        }
+        while(st.size()>0)
+        {
+        ans=ans+st.pop();
+        }
+        if(str.equals(ans))
+        {
+            return true;
+        }
+        return false;
+    }
     
 }
 
