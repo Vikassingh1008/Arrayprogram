@@ -4,7 +4,7 @@ public class Main
  
 	public static void main(String[] args) {
 	
-	//first approach iterating each StackTraceElement
+	//first approach iterating each Element
 	int arr[]={1,2,3,4};
 	int arr2[]=new int[arr.length];
 	
