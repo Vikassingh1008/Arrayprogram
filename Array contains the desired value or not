@@ -1,0 +1,17 @@
+//***************** first method
+
+import java.util.*;
+public class Main
+{
+    
+
+	public static void main (String[] args) {
+	    String arr[]={"a","b","c"};
+	    
+	    System.out.print(check(arr,"k"));
+	}
+	public static boolean check(String arr[],String s)
+	{
+	    return Arrays.asList(arr).contains(s);
+	}
+}
