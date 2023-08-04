@@ -15,3 +15,40 @@ public class Main
 	    return Arrays.asList(arr).contains(s);
 	}
 }
+
+
+
+//**************************** using stack
+
+import java.util.*;
+public class Main
+{
+    
+
+	public static void main (String[] args) {
+	    String arr[]={"a","b","c"};
+	    
+	    System.out.print(check(arr,"m"));
+	}
+	public static boolean check(String arr[],String s)
+	{
+	    Stack<String> st=new Stack<>();
+	    
+	    for(int i=0; i<arr.length;i++)
+	    
+	    {
+	        st.push(arr[i]);
+	    }
+	    while(st.size()>0)
+	    {
+	    if(s==st.pop())
+	    {
+	    return true;
+	    }
+	    }
+	    return false;
+	}
+}
+
+
+
