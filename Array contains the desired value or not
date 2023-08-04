@@ -50,5 +50,32 @@ public class Main
 	}
 }
 
+***********************************************************************************************************************************************
+
+
+
+import java.util.*;
+public class Main
+{
+    
+        public static void main (String[] args) {
+            
+            String str[]={"a","b","c"};
+            System.out.print(valuehai(str,"u"));
+            
+        }
+        public static boolean valuehai(String str[],String s)
+        {
+            for(String el:str)
+            {
+                if(el.equals(s))
+                {
+                    
+                    return true;
+                                    }
+            }
+            return false;
+        }
+}
 
 
