@@ -32,4 +32,43 @@ public class Main
 	    
 	}
 }
+
+
+///********************************************************************** hashmap using
+import java.util.*;
+public class Main
+{
+    public static int firstnonreapating(int arr[],int len)
+    {
+        int ans=-1;
+        HashMap<Integer,Integer> mp=new HashMap<>();
+        
+        for(int i=0;i<len;i++)
+        {
+            if(mp.containsKey(arr[i]))
+            {
+                mp.put(arr[i],mp.get(arr[i])+1);
+            }
+            else
+            {
+                mp.put(arr[i],1);
+            }
+        }
+        for(int i=0;i<len;i++)
+        {
+            if(mp.get(arr[i])==1)
+            {
+                ans=arr[i];
+                return ans;
+            }
+        }
+        return ans;
+    }
+	public static void main(String[] args) {
+		int arr[]={1,2,3,1,2,4,3};
+		int n=arr.length;
+		System.out.print(firstnonreapating(arr,n));
+	}
+}
+
 	
