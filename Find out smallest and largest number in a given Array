@@ -34,3 +34,39 @@ public class Main
         return ans;
     }
 }
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	
+   int arr[]={10,2,300,4,5,22,7};
+   System.out.print(smallest(arr));
+   System.out.print(gratest(arr));
+    
+}
+    public static int smallest(int arr[])
+    {
+        int ans=arr[0];
+        for(int i=1;i<arr.length;i++)
+        {
+            ans=Math.min(ans,arr[i]);
+        }
+        return ans;
+    }
+    public static int gratest(int arr[])
+    {
+        int ans=arr[0];
+        for(int i=1;i<arr.length;i++)
+        {
+            ans=Math.max(ans,arr[i]);
+        }
+        return ans;
+    }
+}
+
