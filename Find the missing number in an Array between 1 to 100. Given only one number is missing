@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	
+   int arr[]={1,2,3,4,5,7,8,9,10};
+   int sum=0;
+   for(int el:arr)
+   {
+       sum=sum+el;
+   }
+   int ans=0;
+   ans=(arr.length+1)*(arr.length+1+1)/2;
+   
+   int rem=ans-sum;
+	
+	System.out.print(rem);
+	}
+}
