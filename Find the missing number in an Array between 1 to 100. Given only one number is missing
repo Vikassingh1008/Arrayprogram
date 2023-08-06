@@ -18,3 +18,29 @@ public class Main
 	System.out.print(rem);
 	}
 }
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	int arr[]={1,2,3,5,4,6,7,8,10};
+	Arrays.sort(arr);
+	for(int i=0;i<arr.length;i++)
+	{
+	    if((arr[i]+1)==arr[i+1])
+	    {
+	        
+	    }else{
+	        System.out.print(arr[i]+1);
+	        break;
+	    }
+	}
+	}
+}
