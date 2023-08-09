@@ -1,14 +1,10 @@
 import java.util.*;
 public class Main
-{
-    
-   
-    
-    
+{    
 	public static void main(String[] args) {
 	    
 	   //palindrome for String
-	   
+	   ///////////////////////////////////first approach
 	   String str="aabbaa";
 	   str=str.toLowerCase();
 	    Stack<String> st=new Stack<>();
@@ -23,25 +19,8 @@ public class Main
 	    
 	    
 	}
-	
-	// first apporach
-// 	 public static boolean palindrome(String str)
-//     {
-//         String temp="";
-        
-//         for(int i=str.length()-1;i>=0;i--)
-//         {
-//             temp=temp+str.charAt(i);
-//         }
-//         if(str.equals(temp))
-//         {
-//             return true;
-//         }
-//     return false;
-//     }
-    
-    
-    public static boolean palindrome(String str,Stack<String> st)
+
+ public static boolean palindrome(String str,Stack<String> st)
     
     {
         String ans="";
@@ -63,4 +42,68 @@ public class Main
     
 }
 
+	
+	////////////////////////////////////////// second apporach
+ 	 String str="aabbaa";
+	   str=str.toLowerCase();
+	   
+	   boolean ans=palindrome(str;
+	  
+	   if(ans)
+	   {
+	       System.out.print("palindrome");
+	   }else{
+	       System.out.print("not palindrome");
+	   }
+	    
+	    
+	}
+// 	 public static boolean palindrome(String str)
+//     {
+//         String temp="";
+        
+//         for(int i=str.length()-1;i>=0;i--)
+//         {
+//             temp=temp+str.charAt(i);
+//         }
+//         if(str.equals(temp))
+//         {
+//             return true;
+//         }
+//     return false;
+//     }
+    
+    
+   
+
+////////////////////
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	
+    String str="aaabaa";
+    System.out.print(palindrome(str));
+    
+	}
+	public static boolean palindrome(String str)
+	{
+	    int len=str.length()-1;
+	    int first=0;
+	    int last=len;
+	    while(first<last)
+	    {
+	        if(str.charAt(first)==str.charAt(last))
+	        {
+	            first++;
+	            last--;
+	        }else{
+	            return false;
+	        }
+	    }
+	    return true;
+	}
+}
 
