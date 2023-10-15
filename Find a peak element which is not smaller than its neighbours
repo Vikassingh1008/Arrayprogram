@@ -1,0 +1,16 @@
+public class Main
+{
+	public static void main(String[] args) {
+		int arr[]={10, 20, 15, 2, 23, 90, 67};
+		int f=0,t=2;
+		for(int s=1;s<arr.length-1;s++)
+		{
+		    if(arr[f]<arr[s] && arr[s]>arr[t])
+		    {
+		        System.out.println(arr[s]);
+		    }
+		    f++;
+		    t++;
+		}
+	}
+}
