@@ -35,3 +35,38 @@ public class Main
 	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+int arr[]={1,2,3,4,5};
+	int target=8;
+	int ans[]=sum(arr,target);
+	System.out.println(Arrays.toString(ans));
+	}
+	public static int []sum(int arr[],int target)
+	
+	{
+	    HashMap<Integer,Integer> hash=new HashMap<>();
+	    
+	    for(int i=0;i<arr.length;i++)
+	    {
+	        int diff=target-arr[i];
+	        if(hash.containsKey(diff))
+	        {
+	            int result[]={hash.get(diff),i};
+	            return result;
+	        }
+	        hash.put(arr[i],i);
+	        
+	    }
+	    return null;
+	}
