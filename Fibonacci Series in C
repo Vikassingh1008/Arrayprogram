@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    //0 1 1 2 3 5 8 13
+    int first=0;
+    int second=1;
+    int numberoftimes=10,sum=0,temp=0;
+    
+    
+    printf("%d %d",first,second);
+    while(numberoftimes>0)
+    {
+        sum=first+second;
+        printf("% d",sum);
+        temp=sum;
+        first=second;
+        second=temp;
+        numberoftimes--;
+        
+    }
+    
+}
