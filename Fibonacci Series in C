@@ -22,5 +22,38 @@ int main()
         numberoftimes--;
         
     }
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////
+#include <stdio.h>
+void recursionfeb(int number)
+{
+    static int first=0,second=1,sum;
+    if(number>0)
+    {
+        sum=first+second;
+        printf("% d",sum);
+        first=second;
+        second=sum;
+        recursionfeb(number-1);
+    }
+}
+
+int main()
+{
+    int number;
+   printf("enter the element");
+   scanf("%d",&number);
+   printf("%d %d",0,1);
+   recursionfeb(number-2);
+    return 0;
+}
+
     
 }
