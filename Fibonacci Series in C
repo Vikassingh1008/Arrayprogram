@@ -1,3 +1,6 @@
+/////without recursion
+
+
 #include <stdio.h>
 
 int main()
