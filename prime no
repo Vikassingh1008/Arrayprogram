@@ -1,0 +1,39 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("enter the start no");
+		int start=sc.nextInt();
+		System.out.println("enter the last no");
+		int last=sc.nextInt();
+		findPrime(start,last);
+		
+	}
+	
+	public static void findPrime(int start, int last)
+	{
+	    for(int i=start;i<=last;i++)
+	    {
+	        if(isPrime(i))
+	        {
+	            System.out.println(i+" ");
+	        }
+	    }
+	}
+	
+	public static boolean isPrime(int number)
+	{
+	    if(number<=1)
+	    return false;
+	    for(int i=2;i<=Math.sqrt(number);i++)
+	    {
+	        if(number%i==0)
+	        {
+	            return false;
+	        }
+	    }
+	    return true;
+	}
+}
